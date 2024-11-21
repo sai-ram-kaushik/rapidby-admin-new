@@ -1,13 +1,18 @@
 import { useMutation } from "@tanstack/react-query";
-import React from "react";
+import React, { useContext } from "react";
 import { loginAdmin } from "../api/postApi/api";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
    const navigate = useNavigate();
+   const { login } = useContext(AuthContext);
    const { mutate, isError, error, isPending, reset } = useMutation({
       mutationFn: loginAdmin,
-      onSuccess: () => {
+      onSuccess: (data) => {
+         console.log("API Response:", data);
+         const { accessToken, refreshToken, admin } = data.data;
+         login({ accessToken, refreshToken, adminData: admin });
          navigate("/admin/dashboard");
       },
    });
@@ -27,7 +32,7 @@ const Login = () => {
    };
 
    return (
-      <div className="w-full bg-gray-100 flex items-center justify-center h-screen">
+      <div className="w-full bg-gray-100 flex items-center justify-center h-[85vh] sm:h-screen">
          <div className="max-w-md w-full p-6">
             <h1 className="text-3xl font-semibold mb-6 text-black text-center">
                Sign In
