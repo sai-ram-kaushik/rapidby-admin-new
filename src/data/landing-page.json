@@ -1,0 +1,27 @@
+{
+   "homeDetails": {
+      "totalProducts": {
+         "icon": "/icons/totalProduct.svg",
+         "title": "Total Products",
+         "arrowIcon": "/icons/arrow.svg",
+         "totalNumber": "105",
+         "newProductQuantity": "10 New Products"
+      },
+
+      "orderPending": {
+         "icon": "/icons/orderPending.svg",
+         "title": "Order Pending",
+         "arrowIcon": "/icons/arrow.svg",
+         "totalNumber": "5",
+         "newProductQuantity": "+2 Orders Pending"
+      },
+
+      "totalRevenue": {
+         "icon": "/icons/user.svg",
+         "title": "Order Pending",
+         "arrowIcon": "/icons/arrow.svg",
+         "totalNumber": "$1756",
+         "newProductQuantity": "+120 New Orders"
+      }
+   }
+}

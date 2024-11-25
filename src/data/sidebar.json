@@ -3,17 +3,17 @@
       "logo": "/logo.png",
       "title": "RapidBy",
       "sidebarLinks": [
-         { "name": "Home", "path": "/", "icon": "/icons/home.svg" },
+         { "name": "Home", "path": "/admin/dashboard", "icon": "/icons/home.svg" },
          {
             "name": "Products",
-            "path": "/products",
+            "path": "/admin/dashboard/products",
             "icon": "/icons/products.svg"
          },
-         { "name": "Orders", "path": "/orders", "icon": "/icons/orders.svg" },
-         { "name": "Report", "path": "/report", "icon": "/icons/report.svg" },
+         { "name": "Orders", "path": "/admin/dashboard/orders", "icon": "/icons/orders.svg" },
+         { "name": "Report", "path": "/admin/dashboard/report", "icon": "/icons/report.svg" },
          {
             "name": "Customer Support",
-            "path": "/customer-support",
+            "path": "/admin/dashboard/customer-support",
             "icon": "/icons/customer.svg"
          }
       ],

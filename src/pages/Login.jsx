@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import React, { useContext } from "react";
-import { loginAdmin } from "../api/postApi/api";
+import { loginAdmin } from "../api/postApi/postApi";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
@@ -10,7 +10,6 @@ const Login = () => {
    const { mutate, isError, error, isPending, reset } = useMutation({
       mutationFn: loginAdmin,
       onSuccess: (data) => {
-         console.log("API Response:", data);
          const { accessToken, refreshToken, admin } = data.data;
          login({ accessToken, refreshToken, adminData: admin });
          navigate("/admin/dashboard");
