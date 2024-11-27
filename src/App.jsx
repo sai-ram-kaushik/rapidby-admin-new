@@ -5,6 +5,8 @@ import Layout from "./utils/Layout";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { AuthProvider } from "./context/AuthContext";
+import Product from "./pages/Product";
+import Order from "./pages/Order";
 
 const App = () => {
    return (
@@ -27,6 +29,8 @@ const Dashboard = () => {
          <Navbar />
          <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/orders" element={<Order />} />
          </Routes>
       </Layout>
    );

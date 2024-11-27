@@ -18,7 +18,7 @@
 
       "totalRevenue": {
          "icon": "/icons/user.svg",
-         "title": "Order Pending",
+         "title": "Total Revenue",
          "arrowIcon": "/icons/arrow.svg",
          "totalNumber": "$1756",
          "newProductQuantity": "+120 New Orders"

@@ -47,7 +47,7 @@ const HomeDetails = ({ homeDetails }) => {
                   <div className="flex items-center gap-3">
                      <img src={orderPending.icon} />
                      <h3 className="font-heading text-[24px] font-medium">
-                        {totalProducts.title}
+                        {orderPending.title}
                      </h3>
                      <img src={orderPending.arrowIcon} />
                   </div>
