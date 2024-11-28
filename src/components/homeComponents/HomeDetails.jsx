@@ -1,16 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { productCount } from "../../api/getApi/getApi";
+import { pendingOrder, productCount } from "../../api/getApi/getApi";
 
 const HomeDetails = ({ homeDetails }) => {
    const { totalProducts, orderPending, totalRevenue } = homeDetails;
 
-   const { data, isLoading } = useQuery({
+   const { data: totalProductCount, isLoading } = useQuery({
       queryKey: ["totalProductCount"],
       queryFn: productCount,
    });
 
-   const productCountValue = data?.data || 0;
+   const { data: pendingOrderCount } = useQuery({
+      queryKey: ["pendingOrder"],
+      queryFn: pendingOrder,
+   });
+
+   const productCountValue = totalProductCount?.data || 0;
+   const countOfPendingOrder = pendingOrderCount?.data;
 
    if (isLoading) {
       return <p>Loading...</p>;
@@ -54,7 +60,7 @@ const HomeDetails = ({ homeDetails }) => {
 
                   <div className="flex items-center gap-2">
                      <h2 className="text-[56px] font-bold">
-                        {orderPending.totalNumber}
+                        {countOfPendingOrder}
                      </h2>
 
                      <div className="flex flex-col items-start">

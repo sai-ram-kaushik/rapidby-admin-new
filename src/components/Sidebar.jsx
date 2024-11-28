@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
    const { title, logo, sidebarLinks, logoutIcon, logoutTitle } = data.sidebar;
    return (
-      <div className="hidden sm:flex sm:flex-col sm:justify-between sm:w-[220px] px-5 py-5 h-screen sticky top-0">
+      <div className="hidden sm:flex sm:flex-col sm:justify-between sm:min-w-[220px] px-5 py-5 h-screen sticky top-0">
          <div>
             <div className="flex flex-col items-start gap-5">
                <div className="flex items-center gap-2">

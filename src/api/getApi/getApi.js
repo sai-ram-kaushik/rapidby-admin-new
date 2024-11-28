@@ -29,4 +29,22 @@ const getOrders = async () => {
    return orders;
 };
 
-export { getProducts, productCount, getOrders };
+const pendingOrder = async () => {
+   const response = await fetch(
+      `http://localhost:8000/api/v1/admin/get-order-pending-count`
+   );
+
+   const pendingOrderCount = response.json();
+   return pendingOrderCount;
+};
+
+const getMonthlyMetrix = async () => {
+   const response = await fetch(
+      `http://localhost:8000/api/v1/admin/get-montly-matrix`
+   );
+
+   const montlyMetrix = response.json();
+   return montlyMetrix;
+};
+
+export { getProducts, productCount, getOrders, pendingOrder, getMonthlyMetrix };
